@@ -1,0 +1,83 @@
+:root {
+  /* Excel-like: white surface, green primary, neutral text */
+  --text: #595959;
+  --text-h: #1a1a1a;
+  --bg: #ffffff;
+  --border: #d0d0d0;
+  --accent: #217346; /* Excel green */
+  --accent-bg: rgba(33, 115, 70, 0.08);
+  --accent-border: rgba(33, 115, 70, 0.55);
+  --social-bg: #f7f7f7;
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 6px 12px -4px,
+    rgba(0, 0, 0, 0.06) 0 2px 4px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 17px/1.5 var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  color: var(--text-h);
+  line-height: 1.05;
+}
+h1 {
+  font-size: 40px;
+  letter-spacing: -1px;
+  margin: 0 0 16px;
+}
+h2 {
+  font-size: 22px;
+  letter-spacing: -0.3px;
+  margin: 0 0 8px;
+}
+@media (max-width: 640px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  padding: 2px 6px;
+  border-radius: 0;
+  color: var(--text-h);
+  background: var(--social-bg);
+}
+
+button {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-border);
+  outline-offset: 2px;
+}

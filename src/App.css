@@ -1,0 +1,80 @@
+.app-shell {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+  box-sizing: border-box;
+}
+
+/* Landing view: stack and center the hero + dropzone. */
+.app-shell--centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.hero h1 {
+  margin: 0 0 12px;
+}
+.hero p {
+  margin: 0 auto;
+  max-width: 46ch;
+  color: var(--text);
+}
+
+/* ---- Dropzone ---- */
+.filedrop {
+  width: 100%;
+  border: 2px dashed var(--border);
+  border-radius: 0;
+  padding: 48px 24px;
+  text-align: center;
+  cursor: pointer;
+  color: var(--text);
+  background: transparent;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+.filedrop:hover,
+.filedrop:focus-visible {
+  border-color: var(--accent-border);
+  outline: none;
+}
+.filedrop.is-dragging {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+.filedrop.is-busy {
+  cursor: progress;
+}
+.filedrop-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 0 0 4px;
+}
+.filedrop-hint {
+  font-size: 14px;
+  color: var(--text);
+  margin: 0;
+}
+
+/* ---- Error ---- */
+.error {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px 16px;
+  border: 1px solid #e0b4b4;
+  border-radius: 0;
+  background: #fdf2f2;
+  color: #b91c1c;
+  font-size: 15px;
+  text-align: center;
+  box-sizing: border-box;
+}
